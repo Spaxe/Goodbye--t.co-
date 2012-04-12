@@ -1,0 +1,15 @@
+{
+  "name": "Goodbye, t.co!",
+  "version": "0.1",
+  "permissions": [
+    "*://*.twitter.com/",
+    "*://twitter.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/", "*://twitter.com/"],
+      "js": ["goodbye-t.co.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
