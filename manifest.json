@@ -8,6 +8,9 @@
     "*://*.twitter.com/",
     "*://twitter.com/"
   ],
+  "icons": {
+    "128": "Goodbye_t_co_icon_v1.png"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.twitter.com/", "*://twitter.com/"],
