@@ -8,6 +8,8 @@
     "*://twitter.com/"
   ],
   "icons": {
+    "16": "Goodbye_t_co_icon_16_v1.png",
+    "48": "Goodbye_t_co_icon_48_v1.png",
     "128": "Goodbye_t_co_icon_v1.png"
   },
   "content_scripts": [
