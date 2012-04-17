@@ -2,7 +2,7 @@
   "name": "Goodbye, t.co!",
   "version": "0.1",
   "manifest_version": 1,
-  "description": "This extension lets you skip any t.co links on Twitter Web UI and goes directly to where links originally goes to.  It will speed up your daily Twitter productivity -- if there is such a thing.",
+  "description": "This extension lets you skip any t.co links. It will speed up your daily Twitter productivity -- if there is such a thing.",
   "permissions": [
     "*://*.twitter.com/",
     "*://twitter.com/"
