@@ -1,7 +1,7 @@
 {
   "name": "Goodbye, t.co!",
-  "version": "1.1",
-  "manifest_version": 3,
+  "version": "1.2",
+  "manifest_version": 4,
   "description": "This extension lets you skip any t.co links. It will speed up your daily Twitter productivity -- if there is such a thing.",
   "permissions": [
     "*://*.twitter.com/",

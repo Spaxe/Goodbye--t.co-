@@ -1,17 +1,22 @@
+function findAnchor (node) {
+  while (node.nodeName != "A" && !!node.parentNode)
+    node = node.parentNode;
+  return node
+}
+
+function replaceHref (target) {
+  if (target.nodeName != "A")
+    return;
+  if (target.hasAttribute('data-expanded-url'))
+    target.title = target.href = target.getAttribute('data-expanded-url');
+}
+
 document.addEventListener("mousedown", function (event) {
-  var target = event.target;
-  if (target.hasAttribute('data-ultimate-url') &&
-      !/https?:\/\/t\.co/.test(target.getAttribute('data-ultimate-url')))
-    target.href = target.getAttribute('data-ultimate-url');
-  else if (target.hasAttribute('data-expanded-url'))
-    target.href = target.getAttribute('data-expanded-url');
+  var target = findAnchor(event.target);
+  replaceHref(target);
 }, true);
 
 document.addEventListener("mouseover", function (event) {
-  var target = event.target;
-  if (target.hasAttribute('data-ultimate-url') &&
-      !/https?:\/\/t\.co/.test(target.getAttribute('data-ultimate-url')))
-    target.title = target.href = target.getAttribute('data-ultimate-url');
-  else if (target.hasAttribute('data-expanded-url'))
-    target.title = target.href = target.getAttribute('data-expanded-url');
+  var target = findAnchor(event.target);
+  replaceHref(target);
 }, true);
