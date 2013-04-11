@@ -12,11 +12,15 @@ function replaceHref (target) {
 }
 
 document.addEventListener("mousedown", function (event) {
-  var target = findAnchor(event.target);
-  replaceHref(target);
+  try {
+    var target = findAnchor(event.target);
+    replaceHref(target);
+  } catch (e) {}
 }, true);
 
 document.addEventListener("mouseover", function (event) {
-  var target = findAnchor(event.target);
-  replaceHref(target);
+  try {
+    var target = findAnchor(event.target);
+    replaceHref(target);
+  } catch (e) {}
 }, true);
