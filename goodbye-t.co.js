@@ -10,7 +10,7 @@ function replaceHref (target) {
   if (target.hasAttribute('data-expanded-url'))  // For Twitter
     target.title = target.href = target.getAttribute('data-expanded-url');
   else if (target.hasAttribute('data-full-url')) // For Tweetdeck
-    target.title = target.href = target.getAttribute('data-full-url')
+    target.title = target.href = target.getAttribute('data-full-url');
 }
 
 function bypass_t_co (event) {
