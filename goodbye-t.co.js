@@ -16,7 +16,7 @@ function replaceHref (target) {
 function bypass_t_co(event) {
   try {
     var target = findAnchor(event.target);
-    replaceHref(target);
+    if (target) replaceHref(target);
   } catch (e) {}
 }
 
