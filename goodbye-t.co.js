@@ -13,10 +13,11 @@ function replaceHref (target) {
     target.title = target.href = target.getAttribute('data-full-url')
 }
 
-function bypass_t_co(event) {
+function bypass_t_co (event) {
   try {
     var target = findAnchor(event.target);
-    if (target) replaceHref(target);
+    if (target)
+      replaceHref(target);
   } catch (e) {}
 }
 
