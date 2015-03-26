@@ -1,24 +1,21 @@
 function findAnchor (node) {
-  while (node.nodeName != "A" && !!node.parentNode)
+  while (node.nodeName != 'A' && !!node.parentNode)
     node = node.parentNode;
-  return node
+  return node;
 }
 
 function replaceHref (target) {
-  if (target.nodeName != "A")
+  if (target.nodeName != 'A')
     return;
 
   // Twitter
   if (target.hasAttribute('data-expanded-url')) {
     target.href = target.getAttribute('data-expanded-url');
+  } else if (target.hasAttribute('data-pre-embedded') && target.getAttribute('data-pre-embedded') == 'true') {
+    target.href = window.location.protocol + '//' + target.text;
     return;
-  } else if (target.hasAttribute('data-pre-embedded') && target.getAttribute('data-pre-embedded') == "true") {
-    target.href = window.location.protocol + "//" + target.text;
-    return;
-  }
-
   // Tweetdeck
-  if (target.hasAttribute('data-full-url')) {
+  } else if (target.hasAttribute('data-full-url')) {
     target.href = target.getAttribute('data-full-url');
   }
 }
