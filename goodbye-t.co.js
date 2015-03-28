@@ -18,7 +18,7 @@ function replaceHref (target) {
   } else if (target.hasAttribute('data-full-url')) {
     target.href = target.getAttribute('data-full-url');
   // Website link
-  } else if (target.hasAttribute('title')) {
+  } else if (target.hasAttribute('title') && target.hasAttribute('target') && target.getAttribute('target') == "_blank") {
     target.href = target.getAttribute('title');
   }
 }
